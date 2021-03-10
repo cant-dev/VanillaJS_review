@@ -113,11 +113,78 @@
 // const message4 = `名前は${name}です。年齢は${age}です`;
 // console.log(message4);
 
-const myProfile = ["ono", 25];
+// const myProfile = ["ono", 25];
 
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}です。`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message4);
+
+// デフォルト値、引数など
+// const sayHello = (name = "guest") => console.log(`こんにちは${name}さん！`);
+// // JSだと関数の呼び出しで引数がないと"定義なし:undefined"が表示される
+// console.log(sayHello("ONO"));
+
+// // スプレット構文 ...
+// // スプレット構文 ⇨ 展開ができるので、要素を結合した変数を使えることができる
+// const arr1 = [1,2];
+// console.log(arr1);
+// console.log(...arr1);
+
+// const sumFunc = (num1,num2) => console.log(num1 + num2);
+// sumFunc(arr1[0],arr1[1]);
+// sumFunc(...arr1);
+
+// まとめる
+// const arr2 = [1,2,3,4,5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
+
+// 配列のコピーや結合
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
+
+// const arr6 = [...arr4];
+// console.log(arr6);
+
+// // 配列の結合
+// const arr7 = [...arr4,...arr5];
+// console.log(arr7);
+
+// MapやFilter
+const nameArr = ["tanaka", "yamada", "ono"];
+// for (let index = 0; index < nameArr.length; index++){
+// console.log(`${index}番目は${nameArr[index]}`);
+// };
+
+// // mapは配列に対して使える関数
+// // 配列の入った変数に対して、map関数を利用することで、map関数の引数に配列の内容を順番に処理する
+// const nameArr2 = nameArr.map((name)=>{
+//   return name;
+// })
+// console.log(nameArr2);
+
+nameArr.map((name, index, test) => console.log(`${index + 1}番目は${name}`));
+
+// // ！！新しい配列を生成する | 順番に処理をする という使い方が違う
+
+// const numArr = [1,2,3,4,5];
+// const newNumArr = numArr.filter((num) => {
+// return num % 2 === 1;
+// })
+// console.log(newNumArr);
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "ono") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
+
+// mapは配列に対して繰り返し処理を行う関数、第二引数にはindexをとる、
