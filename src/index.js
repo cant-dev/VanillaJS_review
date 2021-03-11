@@ -156,35 +156,59 @@
 // console.log(arr7);
 
 // MapやFilter
-const nameArr = ["tanaka", "yamada", "ono"];
-// for (let index = 0; index < nameArr.length; index++){
-// console.log(`${index}番目は${nameArr[index]}`);
-// };
+// const nameArr = ["tanaka", "yamada", "ono"];
+// // for (let index = 0; index < nameArr.length; index++){
+// // console.log(`${index}番目は${nameArr[index]}`);
+// // };
 
-// // mapは配列に対して使える関数
-// // 配列の入った変数に対して、map関数を利用することで、map関数の引数に配列の内容を順番に処理する
-// const nameArr2 = nameArr.map((name)=>{
-//   return name;
-// })
-// console.log(nameArr2);
+// // // mapは配列に対して使える関数
+// // // 配列の入った変数に対して、map関数を利用することで、map関数の引数に配列の内容を順番に処理する
+// // const nameArr2 = nameArr.map((name)=>{
+// //   return name;
+// // })
+// // console.log(nameArr2);
 
-nameArr.map((name, index, test) => console.log(`${index + 1}番目は${name}`));
+// nameArr.map((name, index, test) => console.log(`${index + 1}番目は${name}`));
 
-// // ！！新しい配列を生成する | 順番に処理をする という使い方が違う
+// // // ！！新しい配列を生成する | 順番に処理をする という使い方が違う
 
-// const numArr = [1,2,3,4,5];
-// const newNumArr = numArr.filter((num) => {
-// return num % 2 === 1;
-// })
-// console.log(newNumArr);
+// // const numArr = [1,2,3,4,5];
+// // const newNumArr = numArr.filter((num) => {
+// // return num % 2 === 1;
+// // })
+// // console.log(newNumArr);
 
-const newNameArr = nameArr.map((name) => {
-  if (name === "ono") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "ono") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
 
 // mapは配列に対して繰り返し処理を行う関数、第二引数にはindexをとる、
+
+// 三項演算子
+// if分を簡略化する
+
+// 条件の時 ? true : false ;
+// const sanko =  1>0 ? "trueです" : "falseです" ;
+// console.log (sanko);
+
+// const num = 1000000;
+// 変数numに対して Javascriptの組み込み関数を使っている
+// console.log(num.toLocaleString());
+
+// デフォルトの引数を設定することができる
+// const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力してください' ;
+// console.log(formattedNum);
+
+// 関数は変数に対して行う
+
+// const checkNum = (num1, num2) =>
+//   num1 + num2 < 100 ? (num1+num2) : "許容値を超えています";
+// console.log(checkNum(30, 49));
+
+const flag1 = true;
+const flag2 = false;
